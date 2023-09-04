@@ -30,23 +30,65 @@
 // console.log(hasil);
 
 //menghitung karakter 
-let inputan = prompt(`Masukkan kata : `);
+// let inputan = prompt(`Masukkan kata : `);
 
 
 
-function iterasi(a){
-    let string = {};
-    let jumlah = 0;
-    for(i=0;i<a.length;i++){
-        let karakter = a[i];
-        if (!string[karakter]) {
-          string[karakter] = true;
-          jumlah++;
-        }
+// function iterasi(a){
+//     let string = {};
+//     let jumlah = 0;
+//     for(i=0;i<a.length;i++){
+//         let karakter = a[i];
+//         if (!string[karakter]) {
+//           string[karakter] = true;
+//           jumlah++;
+//         }
+//     }
+//     return jumlah;
+// }
+
+// let hasil = iterasi(inputan);
+
+// console.log(hasil);
+
+
+
+// function findMaxConsecutiveOnes(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let binary = arr[i].toString(2); // Convert the number to binary string
+//         let count = 0;
+//         let maxCount = 0;
+        
+//         for (let j = 0; j < binary.length; j++) {
+//             if (binary[j] === '1') {
+//                 count++;
+//                 maxCount = Math.max(maxCount, count);
+//             } else {
+//                 count = 0;
+//             }
+//         }
+        
+//         console.log(maxCount);
+//     }
+// }
+
+// // Test case
+// const arr = [14, 9, 6, 20, 25];
+// findMaxConsecutiveOnes(arr);
+
+function isPalindrome(str){
+    let baru = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+
+    if(baru == baru.split('').reverse().join('')){
+        console.log('yes');
     }
-    return jumlah;
+    else{
+        console.log('no');
+    }
 }
 
-let hasil = iterasi(inputan);
+let str1 = 'katak';
+console.log(isPalindrome(str1));
 
-console.log(hasil);
+let str2 = 'haha';
+console.log(isPalindrome(str2));
